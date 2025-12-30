@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://crhmunuffqagn"]
 
-[ext_resource type="Shader" uid="uid://7yrx2242u08m" path="res://shaders/Fence.gdshader" id="1_o5pu3"]
+[ext_resource type="Shader" uid="uid://7yrx2242u08m" path="res://shaders/Equations.gdshader" id="1_o5pu3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wxreu"]
 render_priority = 0
@@ -13,6 +13,6 @@ shader_parameter/n_value = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_33yb4"]
 
-[node name="Fence" type="MeshInstance3D"]
+[node name="Equations" type="MeshInstance3D"]
 material_override = SubResource("ShaderMaterial_wxreu")
 mesh = SubResource("QuadMesh_33yb4")

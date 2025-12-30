@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ksg8ud8hejl1"]
+
+[ext_resource type="Shader" uid="uid://28fn3v2x5db8" path="res://shaders/HullOutline.tres" id="1_xdrtq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xdrtq"]
+render_priority = 0
+shader = ExtResource("1_xdrtq")
+shader_parameter/Outline_Size = 0.035
+shader_parameter/Base_Color = Color(0.05, 0.05, 0.05, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_021wx"]
+next_pass = SubResource("ShaderMaterial_xdrtq")
+grow_amount = -0.441
+
+[sub_resource type="SphereMesh" id="SphereMesh_eqq1h"]
+
+[node name="HullOutline" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_021wx")
+lod_bias = 0.001
+mesh = SubResource("SphereMesh_eqq1h")

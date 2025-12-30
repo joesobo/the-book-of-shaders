@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfxla60116akd"]
+
+[ext_resource type="PackedScene" uid="uid://bp5o5gaqdunsn" path="res://scenes/Dissolve.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://hkqjdhqdnwu1" path="res://scenes/Hologram.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ksg8ud8hejl1" path="res://scenes/HullOutline.tscn" id="3_sugp2"]
+
+[sub_resource type="Environment" id="Environment_0wfyh"]
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+environment = SubResource("Environment_0wfyh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.6302338, -0.14977694, 0.7618217, 0.09547143, 0.9887198, 0.115405105, -0.77051324, 5.7442756e-10, 0.6374241, 1.6536362, 2.4349248, -4.5267253)
+
+[node name="Dissolve" parent="." instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Hologram" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="HullOutline" parent="." instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)

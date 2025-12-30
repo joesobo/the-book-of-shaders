@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp5o5gaqdunsn"]
+
+[ext_resource type="Shader" uid="uid://ba1v40dbs2yde" path="res://shaders/Dissolve.tres" id="1_10hcw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_72tua"]
+render_priority = 0
+shader = ExtResource("1_10hcw")
+shader_parameter/Base_Color = Color(0, 0, 0, 1)
+shader_parameter/Dissolve_Height = 0.06
+shader_parameter/Noise_Scale = 0.5
+shader_parameter/Noise_Size = 10.0
+shader_parameter/Edge_Color = Color(0, 9.652629, 13.066943, 1)
+shader_parameter/Glow_Thickness = 0.05
+
+[sub_resource type="SphereMesh" id="SphereMesh_eqq1h"]
+
+[node name="Dissolve" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_72tua")
+mesh = SubResource("SphereMesh_eqq1h")

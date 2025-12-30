@@ -1,0 +1,15 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1767116296
+icon.svg::CompressedTexture2D::8667339475027850436::1767113179::1767113184::1::::<><><>0<>0<>862114dcccd4ccecd530324d4196d06c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://materials/::1767113214
+::res://scenes/::1767116148
+Dissolve.tscn::PackedScene::3502088598473135861::1767115854::0::1::::<><><>0<>0<><>::uid://ba1v40dbs2yde::::res://shaders/Dissolve.tres
+main.tscn::PackedScene::5171935828901419375::1767115807::0::1::::<><><>0<>0<><>::uid://bp5o5gaqdunsn::::res://scenes/Dissolve.tscn
+Hologram.tscn::PackedScene::512953396151426162::1767116148::0::1::::<><><>0<>0<><>::uid://2el3ap80e110::::res://shaders/Hologram.tres
+::res://scripts/::1767114231
+PerlinNoise3DNode.gd::GDScript::7698119211738612658::1767114939::0::1::::VisualShaderNodePerlinNoise3D<>VisualShaderNodeCustom<><>0<>1<><>::
+::res://shaders/::1767116148
+Dissolve.tres::VisualShader::2441422667958738338::1767115807::0::1::::<><><>0<>0<><>::uid://dhxa5s5257s2u::::res://scripts/PerlinNoise3DNode.gd
+Hologram.tres::VisualShader::1904074203097913477::1767116148::0::1::::<><><>0<>0<><>::
+::res://textures/::1767116303
+HologramLines.png::CompressedTexture2D::9154936385824015834::1767116303::1767116324::1::::<><><>0<>0<>9ce67db114a8bc0e68000710f67ab9e3<>res://.godot/imported/HologramLines.png-4660d9c4b457b08b817f14f956b0ad7d.s3tc.ctex::

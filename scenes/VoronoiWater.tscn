@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkbwavby5wb6m"]
+
+[ext_resource type="Shader" uid="uid://c416qb40v5ily" path="res://shaders/VoronoiWater.tres" id="1_l7vwm"]
+[ext_resource type="Texture2D" uid="uid://bhutmk5khvlat" path="res://textures/FlowMap.png" id="2_mbvqs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mbvqs"]
+render_priority = 0
+shader = ExtResource("1_l7vwm")
+shader_parameter/Water_Color = Color(0, 0.294118, 1, 0.776471)
+shader_parameter/Dark_Foam_Color = Color(0, 0, 0.709804, 0.870588)
+shader_parameter/Foam_Thickness = 0.05
+shader_parameter/Flow_Strength = 0.035
+shader_parameter/Flow_Map_Tiling = 0.935
+shader_parameter/Flow_Map_Speed = 0.025
+shader_parameter/Flow_Map = ExtResource("2_mbvqs")
+shader_parameter/Foam_Animation_Speed = Vector2(0.095, -0.15)
+shader_parameter/Cell_Density = 6.16
+shader_parameter/Light_Foam_Color = Color(1, 1, 1, 1)
+shader_parameter/Foam_Offset = Vector2(0.1, 0.1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_4reyw"]
+
+[node name="VoronoiWater" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_mbvqs")
+mesh = SubResource("QuadMesh_4reyw")

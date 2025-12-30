@@ -3,7 +3,7 @@ extends VisualShaderNodeCustom
 class_name VisualShaderNodeSimpleNoise
 
 func _get_name():
-	return "Simple Noise"
+	return "SimpleNoise"
 
 func _get_category():
 	return "CustomShaderNodes"

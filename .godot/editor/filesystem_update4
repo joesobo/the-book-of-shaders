@@ -1,8 +1,6 @@
-res://scenes/Dissolve.tscn
+res://scenes/VoronoiWater.tscn
 res://shaders/Dissolve.tres
-res://scenes/main.tscn
-res://scenes/Hologram.tscn
 res://shaders/Hologram.tres
-res://scenes/HullOutline.tscn
 res://shaders/HullOutline.tres
-res://scripts/PerlinNoise3DNode.gd
+res://shaders/VoronoiWater.tres
+res://scenes/main.tscn

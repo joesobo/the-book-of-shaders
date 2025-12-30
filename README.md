@@ -8,6 +8,7 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Dissolve** - Dissolve/fade effect shader
 - **Hologram** - Holographic display effect
 - **Hull Outline** - Object outline/edge highlighting shader
+- **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
 
 ### Custom Visual Node Scripts
 - **PerlinNoise3DNode** - 3D Perlin noise implementation

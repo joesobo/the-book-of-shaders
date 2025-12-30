@@ -4,8 +4,6 @@ uniform float scale : hint_range(0.0, 1.0) = 0.5;
 uniform float offset : hint_range(0.0, 1.0) = 0.5;
 uniform float a_value : hint_range(0.0, 1.0) = 0.5;
 uniform float b_value : hint_range(0.0, 1.0) = 0.5;
-uniform float c_value : hint_range(0.0, 1.0) = 0.5;
-uniform float d_value : hint_range(0.0, 1.0) = 0.5;
 uniform int n_value : hint_range(1, 20) = 1;
 uniform float radius : hint_range(0.0, 1.0) = 0.3;
 uniform int function_type : hint_enum(
@@ -38,16 +36,13 @@ uniform int function_type : hint_enum(
 	"Double Elliptic Seat",
 	"Double Elliptic Sigmoid",
 	"Circular Fillet",
-	"Circular Arc Through Point",
-	"Quadratic Bezier",
-	"Cubic Bezier",
-	"Cubic Bezier Nearly Through Two Points"
-) = 32;
+	"Circular Arc Through Point"
+) = 29;
 
+#include "res://shaders/math/epsilon.gdshaderinc"
 #include "res://shaders/math/polynomial.gdshaderinc"
 #include "res://shaders/math/exponential.gdshaderinc"
 #include "res://shaders/math/circular.gdshaderinc"
-#include "res://shaders/math/bezier.gdshaderinc"
 
 // Plot line on Y using value between 0 and 1
 float plot(vec2 st, float pct) {
@@ -150,15 +145,6 @@ void fragment() {
 			break;
 		case 29:
 			y = circular_arc_through_point(st.x, a_value, b_value);
-			break;
-		case 30:
-			y = quadratic_bezier(st.x, a_value, b_value);
-			break;
-		case 31:
-			y = cubic_bezier(st.x, a_value, b_value, c_value, d_value);
-			break;
-		case 32:
-			y = cubic_bezier_nearly_through_two_points(st.x, a_value, b_value, c_value, d_value);
 			break;
 	}
 

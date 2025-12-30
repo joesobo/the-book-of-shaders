@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkbwavby5wb6m" path="res://scenes/VoronoiWater.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ddvo2sgqmd8in" path="res://scenes/Flash.tscn" id="5_flash"]
 [ext_resource type="PackedScene" uid="uid://bqyurcjb4rjus" path="res://scenes/UV.tscn" id="6_uv"]
-[ext_resource type="PackedScene" uid="uid://crhmunuffqagn" path="res://scenes/Equations.tscn" id="7_equations"]
+[ext_resource type="PackedScene" path="res://scenes/Equations.tscn" id="7_equations"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true

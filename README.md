@@ -12,6 +12,14 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **UV** - UV coordinate visualization shader for texture debugging
 - **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
 
+### Mathematical Shaping Functions
+- **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping
+  - **12 Built-in GLSL functions** - Basic math operations (ceil, floor, fract, mod, sin, etc.)
+  - [Polynomial Shaping Functions](https://www.flong.com/archive/texts/code/shapers_poly/index.html)
+  - [Exponential Shaping Functions](https://www.flong.com/archive/texts/code/shapers_exp/)
+  - [Circular & Elliptical Shaping Functions](https://www.flong.com/archive/texts/code/shapers_circ/)
+  - [Bezier and Parametric Shaping Functions](https://www.flong.com/archive/texts/code/shapers_bez/)
+
 ### Custom Visual Node Scripts
 - **PerlinNoise3DNode** - 3D Perlin noise implementation
 - **SimpleNoiseNode** - Basic noise generation

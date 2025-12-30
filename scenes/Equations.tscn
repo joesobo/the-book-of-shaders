@@ -13,6 +13,7 @@ shader_parameter/c_value = 0.5
 shader_parameter/d_value = 0.5
 shader_parameter/n_value = 2
 shader_parameter/radius = 0.3
+shader_parameter/dot_radius = 0.015
 shader_parameter/function_type = 32
 
 [sub_resource type="QuadMesh" id="QuadMesh_33yb4"]

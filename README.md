@@ -6,8 +6,10 @@ A playground project for exploring and learning shader development in Godot. Thi
 
 ### Visual Effects Shaders
 - **Dissolve** - Dissolve/fade effect shader
+- **Flash** - Animated color cycling effect with controllable flash speed
 - **Hologram** - Holographic display effect
 - **Hull Outline** - Object outline/edge highlighting shader
+- **UV** - UV coordinate visualization shader for texture debugging
 - **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
 
 ### Custom Visual Node Scripts

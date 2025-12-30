@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfxla60116akd"]
+[gd_scene load_steps=8 format=3 uid="uid://cfxla60116akd"]
 
 [ext_resource type="PackedScene" uid="uid://bp5o5gaqdunsn" path="res://scenes/Dissolve.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hkqjdhqdnwu1" path="res://scenes/Hologram.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ksg8ud8hejl1" path="res://scenes/HullOutline.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bkbwavby5wb6m" path="res://scenes/VoronoiWater.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://ddvo2sgqmd8in" path="res://scenes/Flash.tscn" id="5_flash"]
+[ext_resource type="PackedScene" uid="uid://bqyurcjb4rjus" path="res://scenes/UV.tscn" id="6_uv"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true
@@ -27,3 +29,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
 
 [node name="VoronoiWater" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, 3, 0, -3, -1.3113416e-07, 4, 0, -5)
+
+[node name="Flash" parent="." instance=ExtResource("5_flash")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+
+[node name="UV" parent="." instance=ExtResource("6_uv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)

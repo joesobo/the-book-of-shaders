@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddvo2sgqmd8in"]
+
+[ext_resource type="Shader" uid="uid://dayn20t47vlqx" path="res://shaders/Flash.gdshader" id="1_1xu17"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_72tua"]
+render_priority = 0
+shader = ExtResource("1_1xu17")
+shader_parameter/flash_speed = 2.36800011248
+
+[sub_resource type="SphereMesh" id="SphereMesh_eqq1h"]
+
+[node name="Flash" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_72tua")
+mesh = SubResource("SphereMesh_eqq1h")

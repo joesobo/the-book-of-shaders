@@ -11,6 +11,7 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Hull Outline** - Object outline/edge highlighting shader
 - **UV** - UV coordinate visualization shader for texture debugging
 - **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
+- **Equation** - Display for mathmaterical equations impact on brightness
 
 ### Mathematical Shaping Functions
 - **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping

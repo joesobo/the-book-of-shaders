@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://colosa"]
+
+[ext_resource type="Shader" path="res://shaders/color/Color9.gdshader" id="1_color9"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_color9"]
+render_priority = 0
+shader = ExtResource("1_color9")
+
+[sub_resource type="QuadMesh" id="QuadMesh_color9"]
+
+[node name="Color9" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_color9")
+mesh = SubResource("QuadMesh_color9")

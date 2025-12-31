@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://color2"]
+
+[ext_resource type="Shader" path="res://shaders/Color2.gdshader" id="1_color2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_color2"]
+render_priority = 0
+shader = ExtResource("1_color2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_color2"]
+
+[node name="Color2" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_color2")
+mesh = SubResource("QuadMesh_color2")

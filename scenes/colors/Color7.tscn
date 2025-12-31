@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyewj4pdxh25c"]
+
+[ext_resource type="Shader" uid="uid://b3f12ie6wt2es" path="res://shaders/color/Color7.gdshader" id="1_color7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_color7"]
+render_priority = 0
+shader = ExtResource("1_color7")
+shader_parameter/influenced_color = Color(0.548, 0.565, 0.542, 1)
+shader_parameter/influencing_color_A = Color(0.295, 0.295, 0.295, 1)
+shader_parameter/influencing_color_B = Color(0.904, 0.947, 0.965, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_color7"]
+
+[node name="Color7" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_color7")
+mesh = SubResource("QuadMesh_color7")

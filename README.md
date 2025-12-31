@@ -13,6 +13,7 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
 - **Equation** - Display for mathmaterical equations impact on brightness
 - **Colors** - Displays for how colors interact and influence each other when placed in different contexts
+- **Triangle** - Triangle shape shader using signed distance fields (SDF) with customizable size and colors
 
 ### Mathematical Shaping Functions
 - **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping

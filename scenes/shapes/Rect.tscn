@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://o7uau06gq3lp"]
 
-[ext_resource type="Shader" uid="uid://ckdsmsagvgvob" path="res://shaders/shapes/Shape2.gdshader" id="1_phf52"]
+[ext_resource type="Shader" uid="uid://ckdsmsagvgvob" path="res://shaders/shapes/Rect.gdshader" id="1_phf52"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_triangle"]
 render_priority = 0
@@ -8,6 +8,6 @@ shader = ExtResource("1_phf52")
 
 [sub_resource type="QuadMesh" id="QuadMesh_triangle"]
 
-[node name="Shape2" type="MeshInstance3D"]
+[node name="Rect" type="MeshInstance3D"]
 material_override = SubResource("ShaderMaterial_triangle")
 mesh = SubResource("QuadMesh_triangle")

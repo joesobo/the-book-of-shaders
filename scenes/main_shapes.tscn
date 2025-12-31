@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bct2grnxo3l6w" path="res://scenes/shapes/Triangle.tscn" id="1_triangle"]
 [ext_resource type="PackedScene" uid="uid://8jynq7lnucdk" path="res://scenes/shapes/PietMondrian.tscn" id="2_pietmondrian"]
-[ext_resource type="PackedScene" uid="uid://o7uau06gq3lp" path="res://scenes/shapes/Shape2.tscn" id="3_shape2"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Rect.tscn" id="3_rect"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -12,5 +12,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
 [node name="PietMondrian" parent="." instance=ExtResource("2_pietmondrian")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Shape2" parent="." instance=ExtResource("3_shape2")]
+[node name="Rect" parent="." instance=ExtResource("3_rect")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)

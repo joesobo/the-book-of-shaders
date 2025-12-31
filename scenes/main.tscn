@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b68xho6srb27p" path="res://scenes/Equations.tscn" id="17_equations"]
 [ext_resource type="PackedScene" uid="uid://bct2grnxo3l6w" path="res://scenes/shapes/Triangle.tscn" id="18_triangle"]
 [ext_resource type="PackedScene" uid="uid://8jynq7lnucdk" path="res://scenes/shapes/PietMondrian.tscn" id="19_pietmondrian"]
-[ext_resource type="PackedScene" uid="uid://o7uau06gq3lp" path="res://scenes/shapes/Shape2.tscn" id="20_shape2"]
+[ext_resource type="PackedScene" uid="uid://o7uau06gq3lp" path="res://scenes/shapes/Rect.tscn" id="20_rect"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true
@@ -97,5 +97,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, -5)
 [node name="PietMondrian" parent="Shapes" instance=ExtResource("19_pietmondrian")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -5)
 
-[node name="Shape2" parent="Shapes" instance=ExtResource("20_shape2")]
+[node name="Rect" parent="Shapes" instance=ExtResource("20_rect")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, -5)

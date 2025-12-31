@@ -2,6 +2,8 @@
 
 A playground project for exploring and learning shader development in Godot. This repo serves as a learning resource and a collection of shader implementations, covering both visual shader techniques and code-based shader programming.
 
+---
+
 ## Shader Collection
 
 ### Visual Effects Shaders
@@ -20,6 +22,10 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Triangle** - Triangle shape shader using signed distance fields (SDF) with customizable size and colors
 - **PietMondrian** - Geometric composition shader inspired by Piet Mondrian's abstract art style, featuring rectangular shapes with independent fill and outline colors
 - **Rect** - Rectangle outline shader demonstration
+
+---
+
+## Shader Library
 
 ### Mathematical Shaping Functions
 - **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping

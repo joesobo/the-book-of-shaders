@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8jynq7lnucdk"]
+
+[ext_resource type="Shader" uid="uid://28fgg5mwrfe8" path="res://shaders/shapes/PietMondrian.gdshader" id="1_yggkk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32qoa"]
+render_priority = 0
+shader = ExtResource("1_yggkk")
+shader_parameter/color_a = Color(0.102, 0.114, 0.133, 1)
+shader_parameter/color_b = Color(0.965, 0.937, 0.866, 1)
+shader_parameter/color_c = Color(0.705, 0.133, 0.137, 1)
+shader_parameter/color_d = Color(1, 0.78, 0.173, 1)
+shader_parameter/color_e = Color(0.01, 0.376, 0.616, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_triangle"]
+
+[node name="PietMondrian" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_32qoa")
+mesh = SubResource("QuadMesh_triangle")

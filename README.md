@@ -36,3 +36,4 @@ A playground project for exploring and learning shader development in Godot. Thi
 - [The Book of Shaders](https://thebookofshaders.com/) - Original inspiration
 - [Making Effects with Godot Visual Shaders](https://danielilett.com/2024-02-06-tut8-1-godot-shader-intro/)
 - [Interaction of Color by Josef Albers](https://www.goodreads.com/book/show/111113.Interaction_of_Color)
+- [Patricio Gonzalez Lygia GLSL Shader Library](https://github.com/patriciogonzalezvivo/lygia)

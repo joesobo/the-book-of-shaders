@@ -1,4 +1,4 @@
-// Smooth filled rectangle
+// Smooth filled rectangle (centered at 0.5, 0.5)
 float rect(in vec2 uv, in vec2 size) {
 	size = 0.25 - size * 0.25;
 	vec2 rect_uv = smoothstep(size, size + size * vec2(0.002), uv * (1.0 - uv));
@@ -6,22 +6,23 @@ float rect(in vec2 uv, in vec2 size) {
 	return rect_uv.x * rect_uv.y;
 }
 
-// Hard-edged filled rectangle with margin
-float box_filled(vec2 uv, float margin) {
+// Hard-edged filled rectangle with margin from edges
+float rect(vec2 uv, float margin) {
 	vec2 bl = step(vec2(margin), uv);
 	vec2 tr = step(vec2(margin), 1.0 - uv);
 	return bl.x * bl.y * tr.x * tr.y;
 }
 
-float box_filled(vec2 uv, vec2 center, vec2 size) {
+// Hard-edged filled rectangle at specific position
+float rect(vec2 uv, vec2 center, vec2 size) {
 	vec2 p = (uv - center) / size;
 	vec2 bl = step(vec2(-0.5), p);
 	vec2 tr = step(p, vec2(0.5));
 	return bl.x * bl.y * tr.x * tr.y;
 }
 
-// Rectangle outline
-float box_outline(vec2 uv, vec2 center, vec2 size, float line_width) {
+// Rectangle outline at specific position
+float rect_outline(vec2 uv, vec2 center, vec2 size, float line_width) {
 	vec2 p = (uv - center) / size;
 
 	// Outer rectangle: check if within bounds [-0.5, 0.5]

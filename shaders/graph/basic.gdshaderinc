@@ -20,9 +20,9 @@ vec3 draw_line(vec3 color, vec2 uv, vec2 p1, vec2 p2) {
 }
 
 // Draw a dot at a given position with a given color
-vec3 draw_dot(vec3 color, vec2 uv, vec2 position, vec3 dot_color, float dot_radius) {
+vec3 draw_dot(vec3 color, vec2 uv, vec2 position, vec3 dot_color, float dot_size) {
 	float dot_edge = 0.003;
 	float dist = distance(uv, position);
-	float dot_mask = 1.0 - smoothstep(dot_radius - dot_edge, dot_radius + dot_edge, dist);
+	float dot_mask = 1.0 - smoothstep(dot_size - dot_edge, dot_size + dot_edge, dist);
 	return mix(color, dot_color, dot_mask);
 }

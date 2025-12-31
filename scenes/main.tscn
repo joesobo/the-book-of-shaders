@@ -1,12 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfxla60116akd"]
+[gd_scene load_steps=19 format=3 uid="uid://cfxla60116akd"]
 
-[ext_resource type="PackedScene" uid="uid://bp5o5gaqdunsn" path="res://scenes/Dissolve.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://hkqjdhqdnwu1" path="res://scenes/Hologram.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://ksg8ud8hejl1" path="res://scenes/HullOutline.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://bkbwavby5wb6m" path="res://scenes/VoronoiWater.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://ddvo2sgqmd8in" path="res://scenes/Flash.tscn" id="5_flash"]
-[ext_resource type="PackedScene" uid="uid://bqyurcjb4rjus" path="res://scenes/UV.tscn" id="6_uv"]
-[ext_resource type="PackedScene" path="res://scenes/Equations.tscn" id="7_equations"]
+[ext_resource type="PackedScene" uid="uid://color1" path="res://scenes/colors/Color.tscn" id="1_color"]
+[ext_resource type="PackedScene" uid="uid://color2" path="res://scenes/colors/Color2.tscn" id="2_color2"]
+[ext_resource type="PackedScene" uid="uid://color3" path="res://scenes/colors/Color3.tscn" id="3_color3"]
+[ext_resource type="PackedScene" uid="uid://color4" path="res://scenes/colors/Color4.tscn" id="4_color4"]
+[ext_resource type="PackedScene" uid="uid://color5" path="res://scenes/colors/Color5.tscn" id="5_color5"]
+[ext_resource type="PackedScene" path="res://scenes/colors/Color6.tscn" id="6_color6"]
+[ext_resource type="PackedScene" uid="uid://dyewj4pdxh25c" path="res://scenes/colors/Color7.tscn" id="7_color7"]
+[ext_resource type="PackedScene" path="res://scenes/colors/Color8.tscn" id="8_color8"]
+[ext_resource type="PackedScene" path="res://scenes/colors/Color9.tscn" id="9_color9"]
+[ext_resource type="PackedScene" path="res://scenes/colors/Color10.tscn" id="10_color10"]
+[ext_resource type="PackedScene" uid="uid://bp5o5gaqdunsn" path="res://scenes/Dissolve.tscn" id="11_dissolve"]
+[ext_resource type="PackedScene" uid="uid://hkqjdhqdnwu1" path="res://scenes/Hologram.tscn" id="12_hologram"]
+[ext_resource type="PackedScene" uid="uid://ksg8ud8hejl1" path="res://scenes/HullOutline.tscn" id="13_hulloutline"]
+[ext_resource type="PackedScene" uid="uid://bkbwavby5wb6m" path="res://scenes/VoronoiWater.tscn" id="14_voronoiwater"]
+[ext_resource type="PackedScene" uid="uid://ddvo2sgqmd8in" path="res://scenes/Flash.tscn" id="15_flash"]
+[ext_resource type="PackedScene" uid="uid://bqyurcjb4rjus" path="res://scenes/UV.tscn" id="16_uv"]
+[ext_resource type="PackedScene" uid="uid://b68xho6srb27p" path="res://scenes/Equations.tscn" id="17_equations"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true
@@ -14,28 +24,64 @@ glow_enabled = true
 [node name="Main" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9659259, 0.25881907, 0, -0.25881907, 0.9659258, 0, 4, 0.78306675)
 environment = SubResource("Environment_0wfyh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.6302338, -0.14977694, 0.7618217, 0.09547143, 0.9887198, 0.115405105, -0.77051324, 5.7442756e-10, 0.6374241, 1.6536362, 2.4349248, -4.5267253)
 
-[node name="Dissolve" parent="." instance=ExtResource("1_o5qli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+[node name="ColorShaders" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8007247, 0)
 
-[node name="Hologram" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+[node name="Color" parent="ColorShaders" instance=ExtResource("1_color")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -5)
 
-[node name="HullOutline" parent="." instance=ExtResource("3_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+[node name="Color2" parent="ColorShaders" instance=ExtResource("2_color2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -5)
 
-[node name="VoronoiWater" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, 3, 0, -3, -1.3113416e-07, 4, 0, -5)
+[node name="Color3" parent="ColorShaders" instance=ExtResource("3_color3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5)
 
-[node name="Flash" parent="." instance=ExtResource("5_flash")]
+[node name="Color4" parent="ColorShaders" instance=ExtResource("4_color4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -5)
+
+[node name="Color5" parent="ColorShaders" instance=ExtResource("5_color5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, -5)
+
+[node name="Color6" parent="ColorShaders" instance=ExtResource("6_color6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
 
-[node name="UV" parent="." instance=ExtResource("6_uv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+[node name="Color7" parent="ColorShaders" instance=ExtResource("7_color7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
 
-[node name="Equations" parent="." instance=ExtResource("7_equations")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -5)
+[node name="Color8" parent="ColorShaders" instance=ExtResource("8_color8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Color9" parent="ColorShaders" instance=ExtResource("9_color9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="Color10" parent="ColorShaders" instance=ExtResource("10_color10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="VisualEffects" type="Node3D" parent="."]
+
+[node name="Dissolve" parent="VisualEffects" instance=ExtResource("11_dissolve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -5)
+
+[node name="Hologram" parent="VisualEffects" instance=ExtResource("12_hologram")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -5)
+
+[node name="HullOutline" parent="VisualEffects" instance=ExtResource("13_hulloutline")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5)
+
+[node name="Flash" parent="VisualEffects" instance=ExtResource("15_flash")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -5)
+
+[node name="UV" parent="VisualEffects" instance=ExtResource("16_uv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, -5)
+
+[node name="VoronoiWater" parent="VisualEffects" instance=ExtResource("14_voronoiwater")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, 3, 0, -3, -1.3113416e-07, -2, 0, -5)
+
+[node name="Equations" parent="VisualEffects" instance=ExtResource("17_equations")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)

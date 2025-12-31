@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://b68xho6srb27p"]
 
-[ext_resource type="Shader" uid="uid://dfhupf8rl0u33" path="res://shaders/Equations.gdshader" id="1_o5pu3"]
+[ext_resource type="Shader" uid="uid://do0xvsogpa7yn" path="res://shaders/Equations.gdshader" id="1_s8fni"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wxreu"]
 render_priority = 0
-shader = ExtResource("1_o5pu3")
+shader = ExtResource("1_s8fni")
 shader_parameter/scale = 1.0
 shader_parameter/offset = 0.0
-shader_parameter/a_value = 0.5
-shader_parameter/b_value = 0.5
-shader_parameter/c_value = 0.5
-shader_parameter/d_value = 0.5
-shader_parameter/n_value = 2
+shader_parameter/a_value = 0.1230000058425
+shader_parameter/b_value = 0.726000034485
+shader_parameter/c_value = 0.7650000363375
+shader_parameter/d_value = 0.5130000243675
+shader_parameter/n_value = 20
 shader_parameter/radius = 0.3
-shader_parameter/dot_radius = 0.015
-shader_parameter/function_type = 32
+shader_parameter/dot_radius = 0.02400000114
+shader_parameter/function_type = 29
 
 [sub_resource type="QuadMesh" id="QuadMesh_33yb4"]
 

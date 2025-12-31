@@ -1,6 +1,6 @@
 // Plot line on Y using value between 0 and 1
 float plot(vec2 uv, float pct) {
-	return smoothstep(pct - 0.02, pct, uv.y) - smoothstep(pct, pct + 0.02, uv.y);
+	return smoothstep(pct - 0.04, pct, uv.y) - smoothstep(pct, pct + 0.04, uv.y);
 }
 
 // Draw a grey line between two points

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfwklmgl5jjcm"]
+
+[ext_resource type="Shader" uid="uid://brwuw8b0uk7ui" path="res://shaders/shapes/Logo.gdshader" id="1_13wpf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bbllv"]
+render_priority = 0
+shader = ExtResource("1_13wpf")
+shader_parameter/line_width = 0.0150000007125
+shader_parameter/color_a = Color(0.6745098, 0.8039216, 0.44705883, 1)
+shader_parameter/color_b = Color(0.28235295, 0.3137255, 0.21960784, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_triangle"]
+
+[node name="Logo" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_bbllv")
+mesh = SubResource("QuadMesh_triangle")

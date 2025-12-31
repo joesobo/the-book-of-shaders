@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp7erldujk87q"]
+
+[ext_resource type="Shader" uid="uid://dcvciu2y5mrj1" path="res://shaders/shapes/Overlap.gdshader" id="1_gumg3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5kgh"]
+render_priority = 0
+shader = ExtResource("1_gumg3")
+shader_parameter/distance_mode = 0
+shader_parameter/draw_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_triangle"]
+
+[node name="Overlap" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_j5kgh")
+mesh = SubResource("QuadMesh_triangle")

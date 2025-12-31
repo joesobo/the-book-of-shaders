@@ -42,13 +42,15 @@ uniform int function_type : hint_enum(
 	"Circular Arc Through Point",
 	"Quadratic Bezier",
 	"Cubic Bezier",
-	"Cubic Bezier Nearly Through Two Points"
+	"Cubic Bezier Nearly Through Two Points",
+	"Heartbeat"
 ) = 32;
 
 #include "res://shaders/math/polynomial.gdshaderinc"
 #include "res://shaders/math/exponential.gdshaderinc"
 #include "res://shaders/math/circular.gdshaderinc"
 #include "res://shaders/math/bezier.gdshaderinc"
+#include "res://shaders/math/custom.gdshaderinc"
 #include "res://shaders/graph/basic.gdshaderinc"
 
 void fragment() {
@@ -156,6 +158,9 @@ void fragment() {
 			break;
 		case 32:
 			y = cubic_bezier_nearly_through_two_points(uv.x, a_value, b_value, c_value, d_value);
+			break;
+		case 33:
+			y = heartbeat(uv.x);
 			break;
 	}
 

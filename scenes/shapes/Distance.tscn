@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxojustsnfiw8"]
+
+[ext_resource type="Shader" uid="uid://cbnhv0x4pxr54" path="res://shaders/shapes/Distance.gdshader" id="1_u2oj7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6kco2"]
+render_priority = 0
+shader = ExtResource("1_u2oj7")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/heartbeat_speed = 0.6000000285
+shader_parameter/circle_radius = 0.2000000095
+shader_parameter/color_a = Color(0.5582763, 0.7875862, 1, 1)
+shader_parameter/color_b = Color(1, 0.32999998, 0.32999998, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_triangle"]
+
+[node name="Distance" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_6kco2")
+mesh = SubResource("QuadMesh_triangle")

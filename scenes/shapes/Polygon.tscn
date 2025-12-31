@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqr241lfv3f6m"]
+
+[ext_resource type="Shader" uid="uid://dyqeuulgbwhuj" path="res://shaders/shapes/Polygon.gdshader" id="1_naabt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6gs2x"]
+render_priority = 0
+shader = ExtResource("1_naabt")
+shader_parameter/color_a = Color(0.26082063, 0.6028868, 0.75628775, 1)
+shader_parameter/color_b = Color(0.8266006, 0.6768674, 0.96870655, 1)
+shader_parameter/sides = 3
+
+[sub_resource type="QuadMesh" id="QuadMesh_triangle"]
+
+[node name="Polygon" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_6gs2x")
+mesh = SubResource("QuadMesh_triangle")

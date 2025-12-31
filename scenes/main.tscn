@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cfxla60116akd"]
+[gd_scene load_steps=22 format=3 uid="uid://cfxla60116akd"]
 
 [ext_resource type="PackedScene" uid="uid://color1" path="res://scenes/colors/Color.tscn" id="1_color"]
 [ext_resource type="PackedScene" uid="uid://color2" path="res://scenes/colors/Color2.tscn" id="2_color2"]
@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://ddvo2sgqmd8in" path="res://scenes/Flash.tscn" id="15_flash"]
 [ext_resource type="PackedScene" uid="uid://bqyurcjb4rjus" path="res://scenes/UV.tscn" id="16_uv"]
 [ext_resource type="PackedScene" uid="uid://b68xho6srb27p" path="res://scenes/Equations.tscn" id="17_equations"]
-[ext_resource type="PackedScene" uid="uid://triangle_shape" path="res://scenes/shapes/Triangle.tscn" id="18_triangle"]
+[ext_resource type="PackedScene" uid="uid://bct2grnxo3l6w" path="res://scenes/shapes/Triangle.tscn" id="18_triangle"]
+[ext_resource type="PackedScene" uid="uid://8jynq7lnucdk" path="res://scenes/shapes/PietMondrian.tscn" id="19_pietmondrian"]
+[ext_resource type="PackedScene" uid="uid://o7uau06gq3lp" path="res://scenes/shapes/Shape2.tscn" id="20_shape2"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true
@@ -90,4 +92,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 [node name="Shapes" type="Node3D" parent="."]
 
 [node name="Triangle" parent="Shapes" instance=ExtResource("18_triangle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, -5)
+
+[node name="PietMondrian" parent="Shapes" instance=ExtResource("19_pietmondrian")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -5)
+
+[node name="Shape2" parent="Shapes" instance=ExtResource("20_shape2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, -5)

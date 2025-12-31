@@ -11,9 +11,15 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Hull Outline** - Object outline/edge highlighting shader
 - **UV** - UV coordinate visualization shader for texture debugging
 - **Voronoi Water** - Animated water surface with foam layers using Voronoi patterns and flow maps
-- **Equation** - Display for mathmaterical equations impact on brightness
-- **Colors** - Displays for how colors interact and influence each other when placed in different contexts
+- **Equation** - Display for mathematical equations impact on brightness
+
+### Color Shaders
+- **Color** through **Color10** - A collection of 10 shaders demonstrating how colors interact and influence each other when placed in different contexts, inspired by Josef Albers' Interaction of Color
+
+### Shape Shaders
 - **Triangle** - Triangle shape shader using signed distance fields (SDF) with customizable size and colors
+- **PietMondrian** - Geometric composition shader inspired by Piet Mondrian's abstract art style, featuring rectangular shapes with independent fill and outline colors
+- **Rect** - Rectangle outline shader demonstration
 
 ### Mathematical Shaping Functions
 - **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping

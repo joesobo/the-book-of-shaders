@@ -1,7 +1,17 @@
+#include "res://shaders/math/custom.gdshaderinc"
+
 // Smooth filled rectangle (centered at 0.5, 0.5)
 float rect(in vec2 uv, in vec2 size) {
 	size = 0.25 - size * 0.25;
 	vec2 rect_uv = smoothstep(size, size + size * vec2(0.002), uv * (1.0 - uv));
+
+	return rect_uv.x * rect_uv.y;
+}
+
+float box(in vec2 uv, in vec2 size) {
+	size = 0.5 - size * 0.5;
+	vec2 rect_uv = smoothstep(size, size + vec2(0.001), uv);
+	rect_uv *= smoothstep(size, size + vec2(0.001), vec2(1.0) - uv);
 
 	return rect_uv.x * rect_uv.y;
 }
@@ -41,12 +51,24 @@ float rect_outline(vec2 uv, vec2 center, vec2 size, float line_width) {
 	return outer - inner;
 }
 
-float tri(vec2 uv, float size) {
-	uv -= 0.5;
+float plus(vec2 uv, float size) {
+	return max(box(uv, vec2(size, size / 4.0)), box(uv, vec2(size / 4.0, size)));
+}
+
+float plus(vec2 uv, vec2 size) {
+	return max(box(uv, vec2(size.x, size.y)), box(uv, vec2(size.y, size.x)));
+}
+
+float tri(vec2 uv, float size, vec2 center) {
+	uv -= center;
 	uv *= 5.0;
 	float tri_sdf = max(abs(uv.x) * 0.866025 + uv.y * 0.5, -uv.y * 0.5);
 
-	return step(size, tri_sdf);
+	return 1.0 - step(size, tri_sdf);
+}
+
+float tri(vec2 uv, float size) {
+	return tri(uv, size, vec2(0.5));
 }
 
 float circle(vec2 uv, float radius, vec2 center) {
@@ -76,12 +98,60 @@ float circle_outline(vec2 uv, float radius, vec2 center, float line_width) {
 	// Create inner edge at radius - line_width/2
 	float inner = smoothstep(radius - line_width / 2.0, radius - line_width / 2.0 + 0.001, dist);
 
-	// Outline is the area between inner and outer edges
-	return 1.0 - (inner - outer);
+	// Outline is the area between inner and outer edges (inside outer, outside inner)
+	return inner * (1.0 - outer);
 }
 
 float circle_outline(vec2 uv, float radius) {
 	return circle_outline(uv, radius, vec2(0.5), 0.01);
+}
+
+// Dashed circle outline with repeating angular pattern
+float dashed_circle_outline(vec2 uv, vec2 center, float radius, float width) {
+	vec2 d = uv - center;
+	float r = sqrt(dot(d, d));
+	d = normalize(d);
+	float theta = 180.0 * (atan(d.y, d.x) / PI);
+
+	// Create 45-degree repeating dash pattern
+	float dash_pattern = smoothstep(2.0, 2.1, abs(mod(theta + 2.0, 45.0) - 2.0));
+
+	// Alternate intensity every 45 degrees
+	float intensity = mix(0.5, 1.0, step(45.0, abs(mod(theta, 180.0) - 90.0)));
+
+	// Create ring outline
+	float inner = smoothstep(radius - width / 2.0, radius, r);
+	float outer = smoothstep(radius, radius + width / 2.0, r);
+	float ring = inner * (1.0 - outer);
+
+	return dash_pattern * intensity * ring;
+}
+
+float dashed_circle_outline(vec2 uv, float radius, float width) {
+	return dashed_circle_outline(uv, vec2(0.5), radius, width);
+}
+
+// Partial circle outline with horizontal opening
+float partial_circle_outline(vec2 uv, vec2 center, float radius, float width, float opening) {
+	vec2 d = uv - center;
+	float r = sqrt(dot(d, d));
+	d = normalize(d);
+	if (abs(d.y) > opening) {
+		// Create outer edge at radius + width/2
+		float outer = smoothstep(radius + width / 2.0 - 0.001, radius + width / 2.0, r);
+
+		// Create inner edge at radius - width/2
+		float inner = smoothstep(radius - width / 2.0, radius - width / 2.0 + 0.001, r);
+
+		// Outline is the area between inner and outer edges (inside outer, outside inner)
+		return inner * (1.0 - outer);
+	} else {
+		return 0.0;
+	}
+}
+
+float partial_circle_outline(vec2 uv, float radius, float width, float opening) {
+	return partial_circle_outline(uv, vec2(0.5), radius, width, opening);
 }
 
 // Draw a line segment from p1 to p2 with specified thickness

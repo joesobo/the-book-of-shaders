@@ -7,7 +7,7 @@ render_priority = 0
 shader = ExtResource("1_naabt")
 shader_parameter/color_a = Color(0.26082063, 0.6028868, 0.75628775, 1)
 shader_parameter/color_b = Color(0.8266006, 0.6768674, 0.96870655, 1)
-shader_parameter/sides = 3
+shader_parameter/sides = 5
 
 [sub_resource type="QuadMesh" id="QuadMesh_triangle"]
 

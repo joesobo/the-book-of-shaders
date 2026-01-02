@@ -6,7 +6,7 @@
 render_priority = 0
 shader = ExtResource("1_gumg3")
 shader_parameter/distance_mode = 0
-shader_parameter/draw_mode = 2
+shader_parameter/draw_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_triangle"]
 

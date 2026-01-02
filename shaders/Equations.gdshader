@@ -43,7 +43,8 @@ uniform int function_type : hint_enum(
 	"Quadratic Bezier",
 	"Cubic Bezier",
 	"Cubic Bezier Nearly Through Two Points",
-	"Heartbeat"
+	"Heartbeat",
+	"Bounce"
 ) = 32;
 
 #include "res://shaders/math/polynomial.gdshaderinc"
@@ -161,6 +162,9 @@ void fragment() {
 			break;
 		case 33:
 			y = heartbeat(uv.x);
+			break;
+		case 34:
+			y = bounce(uv.x, n_value);
 			break;
 	}
 

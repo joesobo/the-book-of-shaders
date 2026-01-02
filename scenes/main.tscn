@@ -1,15 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://cfxla60116akd"]
+[gd_scene load_steps=27 format=3 uid="uid://cfxla60116akd"]
 
 [ext_resource type="PackedScene" uid="uid://color1" path="res://scenes/colors/Color.tscn" id="1_color"]
 [ext_resource type="PackedScene" uid="uid://color2" path="res://scenes/colors/Color2.tscn" id="2_color2"]
 [ext_resource type="PackedScene" uid="uid://color3" path="res://scenes/colors/Color3.tscn" id="3_color3"]
 [ext_resource type="PackedScene" uid="uid://color4" path="res://scenes/colors/Color4.tscn" id="4_color4"]
 [ext_resource type="PackedScene" uid="uid://color5" path="res://scenes/colors/Color5.tscn" id="5_color5"]
-[ext_resource type="PackedScene" path="res://scenes/colors/Color6.tscn" id="6_color6"]
+[ext_resource type="PackedScene" uid="uid://color6" path="res://scenes/colors/Color6.tscn" id="6_color6"]
 [ext_resource type="PackedScene" uid="uid://dyewj4pdxh25c" path="res://scenes/colors/Color7.tscn" id="7_color7"]
-[ext_resource type="PackedScene" path="res://scenes/colors/Color8.tscn" id="8_color8"]
-[ext_resource type="PackedScene" path="res://scenes/colors/Color9.tscn" id="9_color9"]
-[ext_resource type="PackedScene" path="res://scenes/colors/Color10.tscn" id="10_color10"]
+[ext_resource type="PackedScene" uid="uid://color8" path="res://scenes/colors/Color8.tscn" id="8_color8"]
+[ext_resource type="PackedScene" uid="uid://colosa" path="res://scenes/colors/Color9.tscn" id="9_color9"]
+[ext_resource type="PackedScene" uid="uid://color10" path="res://scenes/colors/Color10.tscn" id="10_color10"]
 [ext_resource type="PackedScene" uid="uid://bp5o5gaqdunsn" path="res://scenes/Dissolve.tscn" id="11_dissolve"]
 [ext_resource type="PackedScene" uid="uid://hkqjdhqdnwu1" path="res://scenes/Hologram.tscn" id="12_hologram"]
 [ext_resource type="PackedScene" uid="uid://ksg8ud8hejl1" path="res://scenes/HullOutline.tscn" id="13_hulloutline"]
@@ -19,7 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://b68xho6srb27p" path="res://scenes/Equations.tscn" id="17_equations"]
 [ext_resource type="PackedScene" uid="uid://bct2grnxo3l6w" path="res://scenes/shapes/Triangle.tscn" id="18_triangle"]
 [ext_resource type="PackedScene" uid="uid://8jynq7lnucdk" path="res://scenes/shapes/PietMondrian.tscn" id="19_pietmondrian"]
-[ext_resource type="PackedScene" path="res://scenes/shapes/Rect.tscn" id="20_rect"]
+[ext_resource type="PackedScene" uid="uid://o7uau06gq3lp" path="res://scenes/shapes/Rect.tscn" id="20_rect"]
+[ext_resource type="PackedScene" uid="uid://cxojustsnfiw8" path="res://scenes/shapes/Distance.tscn" id="21_distance"]
+[ext_resource type="PackedScene" uid="uid://dp7erldujk87q" path="res://scenes/shapes/Overlap.tscn" id="22_overlap"]
+[ext_resource type="PackedScene" uid="uid://cqr241lfv3f6m" path="res://scenes/shapes/Polygon.tscn" id="23_polygon"]
+[ext_resource type="PackedScene" uid="uid://d4j1bvx3dfy4b" path="res://scenes/shapes/Flower.tscn" id="24_flower"]
+[ext_resource type="PackedScene" uid="uid://bfwklmgl5jjcm" path="res://scenes/shapes/Logo.tscn" id="25_logo"]
 
 [sub_resource type="Environment" id="Environment_0wfyh"]
 glow_enabled = true
@@ -92,10 +97,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 [node name="Shapes" type="Node3D" parent="."]
 
 [node name="Triangle" parent="Shapes" instance=ExtResource("18_triangle")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, -5)
-
-[node name="PietMondrian" parent="Shapes" instance=ExtResource("19_pietmondrian")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -5)
 
-[node name="Rect" parent="Shapes" instance=ExtResource("20_rect")]
+[node name="PietMondrian" parent="Shapes" instance=ExtResource("19_pietmondrian")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, -5)
+
+[node name="Rect" parent="Shapes" instance=ExtResource("20_rect")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, -5)
+
+[node name="Distance" parent="Shapes" instance=ExtResource("21_distance")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, -5)
+
+[node name="Overlap" parent="Shapes" instance=ExtResource("22_overlap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5, -5)
+
+[node name="Polygon" parent="Shapes" instance=ExtResource("23_polygon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+
+[node name="Flower" parent="Shapes" instance=ExtResource("24_flower")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -5)
+
+[node name="Logo" parent="Shapes" instance=ExtResource("25_logo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)

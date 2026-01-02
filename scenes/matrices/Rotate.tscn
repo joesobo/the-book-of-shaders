@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo445vfr3u0q6"]
+
+[ext_resource type="Shader" uid="uid://ndaohmr42i07" path="res://shaders/matrices/Rotate.gdshader" id="1_e8g7b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f8816"]
+render_priority = 0
+shader = ExtResource("1_e8g7b")
+
+[sub_resource type="QuadMesh" id="QuadMesh_color2"]
+
+[node name="Rotate" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_f8816")
+mesh = SubResource("QuadMesh_color2")

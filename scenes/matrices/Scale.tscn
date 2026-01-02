@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf6r5t12rb2qw"]
+
+[ext_resource type="Shader" uid="uid://c8jltv2ty7xuh" path="res://shaders/matrices/Scale.gdshader" id="1_8525d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kctx"]
+render_priority = 0
+shader = ExtResource("1_8525d")
+
+[sub_resource type="QuadMesh" id="QuadMesh_color2"]
+
+[node name="Scale" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_5kctx")
+mesh = SubResource("QuadMesh_color2")

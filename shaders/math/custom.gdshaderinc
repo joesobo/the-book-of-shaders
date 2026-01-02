@@ -1,3 +1,9 @@
+// Smooth step helper function
+// Creates a smooth falloff around radius R
+float radial_smooth(float r, float R) {
+	return 1.0 - smoothstep(R - 0.01, R + 0.01, r);
+}
+
 // Heartbeat pattern components:
 // - Quick spike (QRS complex) around 0.2-0.3
 // - Small dip (P wave) around 0.4
@@ -25,6 +31,23 @@ float heartbeat(float x) {
 		float t = (cycle - 0.45) / 0.25;
 		y = 0.1 + 0.9 * exp(-20.0 * (t - 0.5) * (t - 0.5));
 	}
+
+	return clamp(y, 0.0, 1.0);
+}
+
+// Bounce pattern: simulates a bouncing ball with decreasing amplitude
+// - Uses absolute sine wave for bounce motion
+// - Exponential decay for diminishing bounce height
+// - n controls the number of bounces that occur across the range [0, 1]
+float bounce(float x, int n) {
+	// Exponential decay for amplitude (ball loses energy)
+	float amplitude = exp(-2.0 * x);
+
+	// n controls how many bounces occur
+	float frequency = float(n);
+
+	// Absolute value of sine creates the bounce peaks
+	float y = amplitude * abs(sin(x * frequency * 3.14159));
 
 	return clamp(y, 0.0, 1.0);
 }

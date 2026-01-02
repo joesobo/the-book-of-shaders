@@ -1,16 +1,36 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="PackedScene" uid="uid://bct2grnxo3l6w" path="res://scenes/shapes/Triangle.tscn" id="1_triangle"]
 [ext_resource type="PackedScene" uid="uid://8jynq7lnucdk" path="res://scenes/shapes/PietMondrian.tscn" id="2_pietmondrian"]
 [ext_resource type="PackedScene" path="res://scenes/shapes/Rect.tscn" id="3_rect"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Distance.tscn" id="4_distance"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Overlap.tscn" id="5_overlap"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Polygon.tscn" id="6_polygon"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Flower.tscn" id="7_flower"]
+[ext_resource type="PackedScene" path="res://scenes/shapes/Logo.tscn" id="8_logo"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Triangle" parent="." instance=ExtResource("1_triangle")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, 0)
 
 [node name="PietMondrian" parent="." instance=ExtResource("2_pietmondrian")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, 0)
 
 [node name="Rect" parent="." instance=ExtResource("3_rect")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Distance" parent="." instance=ExtResource("4_distance")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 0)
+
+[node name="Overlap" parent="." instance=ExtResource("5_overlap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.5, 0)
+
+[node name="Polygon" parent="." instance=ExtResource("6_polygon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Flower" parent="." instance=ExtResource("7_flower")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Logo" parent="." instance=ExtResource("8_logo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

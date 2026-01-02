@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3o7hd5a6tbms"]
+
+[ext_resource type="Shader" uid="uid://djvqndymnakap" path="res://shaders/matrices/YUVColor.gdshader" id="1_2x41r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3cned"]
+render_priority = 0
+shader = ExtResource("1_2x41r")
+
+[sub_resource type="QuadMesh" id="QuadMesh_color2"]
+
+[node name="YUVColor" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_3cned")
+mesh = SubResource("QuadMesh_color2")

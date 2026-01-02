@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3qc0yjburorq"]
+
+[ext_resource type="Shader" uid="uid://daorp6452a7wj" path="res://shaders/matrices/HUD.gdshader" id="1_lsrin"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pjb5a"]
+render_priority = 0
+shader = ExtResource("1_lsrin")
+shader_parameter/color_a = Color(0.30419996, 0.35424998, 0.39, 1)
+shader_parameter/color_b = Color(0.74, 0.95, 1, 1)
+shader_parameter/color_c = Color(0.87, 0.98, 1, 1)
+shader_parameter/color_d = Color(0.35, 0.76, 0.83, 1)
+shader_parameter/color_e = Color(1, 0.38, 0.227, 1)
+shader_parameter/blue_circle_radius_0 = 0.02000000095
+shader_parameter/blue_circle_radius_1 = 0.15
+shader_parameter/blue_circle_radius_2 = 0.25
+shader_parameter/white_circle_radius = 0.35
+shader_parameter/dashed_circle_radius = 0.45
+shader_parameter/partial_circle_radius = 0.38000001805
+shader_parameter/triangle_size = 0.02
+shader_parameter/triangle_movement = 0.025
+shader_parameter/moving_line_speed = 0.5000004987499995
+shader_parameter/inner_circle_thickness = 0.005
+shader_parameter/outer_circle_thickness = 0.01
+shader_parameter/moving_line_thickness = 0.002000000095
+
+[sub_resource type="QuadMesh" id="QuadMesh_color2"]
+
+[node name="HUD" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_pjb5a")
+mesh = SubResource("QuadMesh_color2")

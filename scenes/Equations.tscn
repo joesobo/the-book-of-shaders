@@ -5,16 +5,16 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wxreu"]
 render_priority = 0
 shader = ExtResource("1_s8fni")
-shader_parameter/scale = 0.50000002375
-shader_parameter/offset = 0.0
+shader_parameter/scale = 0.5
+shader_parameter/offset = 0.062000002945
 shader_parameter/a_value = 0.5
 shader_parameter/b_value = 0.5
 shader_parameter/c_value = 0.5
 shader_parameter/d_value = 0.5
-shader_parameter/n_value = 1
+shader_parameter/n_value = 4
 shader_parameter/radius = 0.3
 shader_parameter/dot_radius = 0.02400000114
-shader_parameter/function_type = 33
+shader_parameter/function_type = 34
 
 [sub_resource type="QuadMesh" id="QuadMesh_33yb4"]
 

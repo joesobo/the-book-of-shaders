@@ -22,10 +22,22 @@ A playground project for exploring and learning shader development in Godot. Thi
 - **Triangle** - Triangle shape shader using signed distance fields (SDF) with customizable size and colors
 - **PietMondrian** - Geometric composition shader inspired by Piet Mondrian's abstract art style, featuring rectangular shapes with independent fill and outline colors
 - **Rect** - Rectangle outline shader demonstration
+- **Distance** - Distance field visualization shader demonstrating various distance metrics
+- **Overlap** - Distance field operations shader with multiple calculation modes (Normal, Min, Max) and drawing modes (Fract, Step, Double Step, Smoothstep)
+- **Polygon** - Polar coordinate-based polygon shader for creating regular polygons with adjustable sides
+- **Flower** - Polar coordinate flower patterns with 5 different modes (Three, Six, Five, Eighteen, Gear) using trigonometric functions
+- **Logo** - Custom logo creation shader using combination of primitive shapes with customizable colors
 
 ---
 
 ## Shader Library
+
+### Shape Primitives (`shaders/shapes/basic.gdshaderinc`)
+A collection of reusable shape functions for building complex shader effects:
+- **Rectangles** - Multiple variations including filled, outlined, and positioned rectangles
+- **Circles** - Filled circles, blurred circles, and circle outlines with customizable center and radius
+- **Triangles** - Triangle shapes using signed distance fields
+- **Lines** - Line segment drawing with adjustable thickness for creating custom patterns
 
 ### Mathematical Shaping Functions
 - **Equations** - Interactive shader demonstrating 33 mathematical shaping functions for easing, tweening, and signal shaping
